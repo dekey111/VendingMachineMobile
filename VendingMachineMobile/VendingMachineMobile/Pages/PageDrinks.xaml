@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VendingMachineMobile.Pages.PageDrinks"
+             Title="Работа с напитком">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Название" />
+            <Entry Text="{Binding Name}" />
+            <Label Text="Цена" />
+            <Entry Text="{Binding Cost}" />
+            <Label Text="Количество" />
+            <Entry Text="{Binding Count}" />
+            
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Сохранить" Clicked="SaveDrinks" />
+                <Button Text="Удалить" Clicked="DeleteDrinks" />
+                <Button Text="Отмена" Clicked="Cancel" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
