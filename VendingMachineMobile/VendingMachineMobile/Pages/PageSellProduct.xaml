@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VendingMachineMobile.Pages.PageSellProduct"
+             Title="Покупка напитка">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Название" />
+            <Entry Text="{Binding Name}" IsEnabled="False" />
+            
+            <Label Text="Цена" />
+            <Entry Text="{Binding Cost}" IsEnabled="False" x:Name="Cost"/>
+            
+            <Label Text="Количество в автомате" />
+            <Entry Text="{Binding Count}" IsEnabled="False"/>
+            
+            <Label Text="Покупаемое количество" />
+            <Entry  x:Name="Count" TextChanged="Count_TextChanged" MaxLength="5"/>
+            <Label x:Name="lSum" />
+
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Купить" Clicked="BuyProduct" />
+                <Button Text="Отмена" Clicked="Cancel" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
